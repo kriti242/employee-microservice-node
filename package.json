@@ -7,8 +7,7 @@
     "service": "EMPLOYEE",
     "service_short": "employee",
     "reporter": "jslint",
-    "distribution": "./distribution",
-    "build": "./distribution/build"
+    "distribution": "./distribution"
   },
   "scripts": {
     "start": "node index.js",
