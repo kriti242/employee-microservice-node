@@ -16,7 +16,7 @@
     "debug": "DEBUG=express* node --inspect index.js",
     "copy": "cp -R -L  ./node_modules ./app ./*.json ./config ./logger ./test ./kubernetes ./*.js  $npm_package_config_build",
     "build": "npm run clean",
-    "package": " npm run build && npm run copy",
+    "package": "npm run copy",
     "lint": "eslint ."
   },
   "repository": {
