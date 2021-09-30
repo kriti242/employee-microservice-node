@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "An example Node.js microservices",
   "main": "index.js",
+  "config": {
+    "service": "EMPLOYEE",
+    "service_short": "employee",
+    "reporter": "jslint",
+    "distribution": "./distribution",
+    "build": "./distribution/build"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "NODE_ENV=development nodemon .",
