@@ -11,12 +11,12 @@
     "test-debug": "NODE_ENV=test mocha --debug-brk --compilers js:babel-core/register './test/setup.js' './app/**/*-spec.js'",
     "clean:build": "node_modules/.bin/rimraf $npm_package_config_distribution",
     "create:build": "node_modules/.bin/mkdirp $npm_package_config_build",
-    "clean": "npm run clean:build && npm run create:build && rimraf npm-debug.log",
+    "clean": "npm run create:build && rimraf npm-debug.log",
     "coverage": "nyc --report-dir ./coverage --reporter=html --reporter=text --reporter=lcov --reporter=cobertura npm test",
     "debug": "DEBUG=express* node --inspect index.js",
     "copy": "cp -R -L  ./node_modules ./app ./*.json ./config ./logger ./test ./kubernetes ./*.js  $npm_package_config_build",
     "build": "npm run clean",
-    "package": "npm run copy",
+    "package": "npm run build && npm run copy",
     "lint": "eslint ."
   },
   "repository": {
