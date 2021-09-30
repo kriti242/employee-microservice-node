@@ -14,8 +14,9 @@
     "clean": "npm run create:build && rimraf npm-debug.log",
     "coverage": "nyc --report-dir ./coverage --reporter=html --reporter=text --reporter=lcov --reporter=cobertura npm test",
     "debug": "DEBUG=express* node --inspect index.js",
-    "copy": "cp -R -L  ./node_modules ./app ./*.json ./config ./logger ./test ./kubernetes ./*.js  $npm_package_config_build",
+    "copy": "cp -R -L  ./node_modules ./app ./*.json ./config ./logger ./test ./kubernetes $npm_package_config_build",
     "build": "npm run clean",
+    "prepackage": "echo Packaging $npm_package_config_service v\"$npm_package_version\" service",
     "package": "npm run build && npm run copy",
     "lint": "eslint ."
   },
