@@ -6,9 +6,8 @@
   "config": {
     "service": "EMPLOYEE",
     "service_short": "employee",
-    "reporter": "jslint",
     "distribution": "./distribution",
-    "build": "./distribution/build",
+    "build": "./distribution/build"
   },
   "scripts": {
     "start": "node index.js",
