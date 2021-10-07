@@ -1,0 +1,6 @@
+version: "3.6"
+services:
+  employee:
+    build: .
+    image: kriti242/employee-microservice-node:v1
+    ports:
